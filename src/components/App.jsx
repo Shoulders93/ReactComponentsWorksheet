@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import DisplayName from "./DisplayName";
+import NamesList from "./NamesList";
 
 class App extends Component {
     constructor(props){
@@ -13,9 +14,10 @@ class App extends Component {
     render(){
         return (
             <div>
-                <DisplayName />
+                <DisplayName firstName="Reggie" lastName="White" />
+                <NamesList first="Mike" second="Nevin" third="Aaron" fourth="Tory" fifth="Kelly" />
             </div>
-        )
+        );
     }
     
 }
