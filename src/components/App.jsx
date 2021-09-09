@@ -11,11 +11,16 @@ class App extends Component {
         };
     }
 
+    AlertUser = (newAlert) => {
+        alert('devCodeCamp')
+    }
+
     render(){
         return (
             <div>
                 <DisplayName firstName="Reggie" lastName="White" />
                 <NamesList first="Mike" second="Nevin" third="Aaron" fourth="Tory" fifth="Kelly" />
+                <this.AlertUser createAlert={this.AlertUser} />
             </div>
         );
     }
