@@ -16,7 +16,7 @@ class AlertUser extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        alert('devCodeCamp')
+        this.props.newAlert()
     }
 
     render() {
