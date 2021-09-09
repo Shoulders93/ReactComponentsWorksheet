@@ -8,5 +8,5 @@ function DisplayName(props){
         </div>
      );
 }
- 
+
 export default DisplayName;

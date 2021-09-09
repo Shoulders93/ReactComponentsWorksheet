@@ -3,13 +3,17 @@ import DisplayName from "./DisplayName";
 import NamesList from "./NamesList";
 import AlertUser from "./AlertUser";
 import Superhero from "./Superhero";
+import SuperheroCreateForm from "./SuperheroCreateForm";
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            firstName: '',
-            lastName: '',
+            hero: [
+                {superheroId: "1", name: "Batman", primaryAbility: "Wealthy", secondaryAbility: "Rich"},
+                {superheroId: "2", name: "Superman", primaryAbility: "Super Strength", secondaryAbility: "Fly"},
+                {superheroId: "3", name: "Spiderman", primaryAbility: "Spidey Sense", secondaryAbility: "Shoots Web"},
+            ]
         };
     }
 
@@ -17,6 +21,14 @@ class App extends Component {
         alert('devCodeCamp')
     }
 
+    createSH = (newHero) => {
+        console.log(newHero)
+        this.setState({
+            hero: hero.push(newHero)
+        })
+    }
+    // this is the definition
+    
     render(){
         return (
             <div>
@@ -25,6 +37,7 @@ class App extends Component {
                 <AlertUser  newAlert={this.alertFunction}/>
                 <br></br>
                 <Superhero />
+                <SuperheroCreateForm createNewSuperhero={this.createSH}/>
             </div>
         );
     }
