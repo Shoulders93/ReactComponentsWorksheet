@@ -4,7 +4,7 @@ class AlertUser extends Component {
     constructor(props){
         super(props);
         this.state = {
-
+            button: '',
         }
     }
 
@@ -16,14 +16,16 @@ class AlertUser extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.createAlert(this.state)
+        alert('devCodeCamp')
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <button type='submit'>Hit Me</button>
+                <button type="submit">Click Me</button>
             </form>
         );
     }
 }
+
+export default AlertUser;
