@@ -25,7 +25,7 @@ class App extends Component {
         console.log(newHero)
         this.setState({
             hero: hero.push(newHero)
-        })
+        });
     }
     // this is the definition
     
